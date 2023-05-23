@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="ttk.Frame" id="mainwindow">
+    <property name="height">250</property>
+    <property name="padding">10</property>
+    <property name="width">250</property>
+    <layout manager="grid">
+      <property name="column">0</property>
+      <property name="row">0</property>
+      <property type="row" id="0" name="pad">10</property>
+      <property type="row" id="1" name="pad">10</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="ttk.Label_1">
+        <property name="anchor">e</property>
+        <property name="text" translatable="yes">하하하</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">1</property>
+          <property name="row">0</property>
+          <property name="sticky">ew</property>
+          <property type="row" id="0" name="pad">10</property>
+          <property type="row" id="1" name="pad">10</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="my_button">
+        <property name="command" type="command" cbtype="simple" args="">on_my_button_clicked</property>
+        <property name="text" translatable="yes">Click me</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">1</property>
+          <property type="row" id="0" name="pad">10</property>
+          <property type="row" id="1" name="pad">10</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="ttk.Button_2">
+        <property name="command" type="command" cbtype="simple" args="">on_button2_clicked</property>
+        <property name="text" translatable="yes">Button 2</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">1</property>
+          <property type="row" id="0" name="pad">10</property>
+          <property type="row" id="1" name="pad">10</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
