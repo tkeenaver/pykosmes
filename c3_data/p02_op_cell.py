@@ -19,9 +19,25 @@ c4 = ws.cell(row=4, column=3)
 print(c4, c4.coordinate, c4.value)
 
 b2.value = 50
-c4.value = 50
-print(b2.value)
-print(c4.value)
+c4.value = 60
+print(f'{b2.value=}')
+print(f'{c4.value=}')
+
+for row in ws.iter_rows(min_row=1, max_col=3, max_row=4, values_only=True):
+    for cell in row:
+        print(cell,end = ',')
+    print()
+ws.append(['A', 3.14, 'C'])
+
+from openpyxl.chart import BarChart, Reference
+chart = BarChart()
+data = Reference(ws, min_col=1, min_row=1, max_col=3, max_row=4)
+chart.add_data(data, titles_from_data=True)
+ws.add_chart(chart, 'E5')
+
+from openpyxl.drawing.image import Image
+img = Image('data/boxplot.png')
+ws.add_image(img, 'A20')
 
 #워크북의 변경내용을 새로운 파일에 저장
 wb.save(os.path.join(cwd, "output", "df2.xlsx"))

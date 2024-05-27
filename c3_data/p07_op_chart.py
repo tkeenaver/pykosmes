@@ -19,7 +19,7 @@ for row in dataframe_to_rows(tdf, index=True, header=True):
     if len(row) > 1:
         ws.append(row)
         print(row)
-          
+
 chart = BarChart()
 chart.type = "col"
 chart.style = 10
