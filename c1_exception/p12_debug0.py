@@ -1,4 +1,4 @@
-import p13_debug1
+import p13_pdebug1
 
 def sub0():
     print("called sub0")
@@ -8,5 +8,5 @@ y = 3
 print(x+y)
 sub0()
 print(x*y)
-debug1.sub1()
+p13_pdebug1.sub1()
 print("end.")
